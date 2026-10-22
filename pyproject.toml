@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "balancelab"
+version = "0.1.0"
+description = "Assembly line balancing and bottleneck optimization toolkit （生产线平衡与瓶颈优化工具）"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "aoyexiaoqi" }]
+keywords = ["line-balancing", "industrial-engineering", "salbp", "bottleneck", "optimization"]
+dependencies = [
+    "numpy>=1.21",
+]
+
+[project.optional-dependencies]
+optimize = ["ortools>=9.0"]
+plot = ["plotly>=5.0"]
+dev = ["pytest>=7.0", "pytest-cov>=4.0"]
+
+[project.scripts]
+balancelab = "balancelab.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

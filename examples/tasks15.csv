@@ -1,0 +1,16 @@
+id,name,time,predecessors
+T01,Base frame prep,42,
+T02,Motor mount,24,
+T03,Gearbox fit,36,T01
+T04,Shaft assembly,28,"T01,T02"
+T05,Motor install,48,T02
+T06,Coupling align,20,T03
+T07,Wiring harness,33,T05
+T08,Sensor fit,29,T06
+T09,Control box,45,"T06,T07"
+T10,Cover fit,21,T08
+T11,Calibration,38,T09
+T12,Label & pack prep,26,T09
+T13,Functional test,33,"T10,T11"
+T14,Final inspection,28,T12
+T15,Packing,44,"T13,T14"
